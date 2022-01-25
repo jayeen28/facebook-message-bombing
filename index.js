@@ -23,7 +23,6 @@ const handleSendMessage = async (page) => {
         const loginButton = document.getElementsByName('login')[0];
         loginButton.click()
     });
-    console.log(process)
     //wait until loaded
     await page.waitForNavigation();
     //go to message room
