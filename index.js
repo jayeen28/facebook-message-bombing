@@ -23,6 +23,7 @@ const handleSendMessage = async (page) => {
         const loginButton = document.getElementsByName('login')[0];
         loginButton.click()
     });
+    console.log(process)
     //wait until loaded
     await page.waitForNavigation();
     //go to message room
@@ -31,11 +32,12 @@ const handleSendMessage = async (page) => {
     await page.evaluate(() => {
         const input = document.getElementById('composerInput');
         const send = document.getElementsByName('send')[0];
+        const like = document.getElementsByName('like')[0];
         // input.focus();
         setInterval(async () => {
-            input.focus();
-            input.innerText = "Hello, I am Jayeen's bot";
-            send.click();
+            // input.focus();
+            // input.innerText = "Hello, I am Jayeen's bot";
+            like.click();
         }, 4000);
     })
 })();
