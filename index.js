@@ -25,7 +25,6 @@ const handleSendMessage = async (page) => {
     });
     //wait until loaded
     await page.waitForNavigation();
-    //go to message room
     //go to mobile version
     await page.goto(`${process.env.FACEBOOK_TARGETED_INBOX}`);
     await page.evaluate(() => {
@@ -34,9 +33,9 @@ const handleSendMessage = async (page) => {
         const like = document.getElementsByName('like')[0];
         // input.focus();
         setInterval(async () => {
-            // input.focus();
-            // input.innerText = "Hello, I am Jayeen's bot";
-            like.click();
+            input.innerText = "Hello, I am Jayeen's bot";
+            send.disabled = false;
+            send.click();
         }, 4000);
     })
 })();
