@@ -1,8 +1,6 @@
 const puppeteer = require('puppeteer');
 require('dotenv').config();
-const handleSendMessage = async (page) => {
 
-}
 (async () => {
     const browser = await puppeteer.launch({
         headless: false, executablePath: 'google-chrome-stable', args: [
@@ -31,7 +29,7 @@ const handleSendMessage = async (page) => {
         const input = document.getElementById('composerInput');
         const send = document.getElementsByName('send')[0];
         const like = document.getElementsByName('like')[0];
-        // input.focus();
+        //run message sending loop
         setInterval(async () => {
             input.innerText = "Hello, I am Jayeen's bot";
             send.disabled = false;
